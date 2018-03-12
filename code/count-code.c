@@ -70,15 +70,16 @@ void findAllDirs(const char *path)
 	
 	do
 	{
-		if(!strcmp(fa.name,".") || !strcm(fa.name,".."))
+		if(!strcmp(fa.name,".") || !strcmp(fa.name,".."))
 			continue;
+			
 		if(fa.attrib == _A_SUBDIR)
 		{
 			sprintf(thePath,"%s/%s",path,fa.name);
 			findAllCodes(thePath);
 			findAllDirs(thePath);
 		}
-	}while(-findnext(handle,&fa)==0);
+	}while(_findnext(handle,&fa)==0);
 	
 	_findclose(handle);
 }
