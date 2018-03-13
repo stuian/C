@@ -2,9 +2,5 @@
 
 int main()
 {
-	printf("\n\
-		a\n\
-a")	;
-	
-	return 0;
+	printf("%d",sizeof(short int)); 
 }
