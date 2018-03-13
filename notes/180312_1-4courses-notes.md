@@ -261,7 +261,7 @@ windows：
 
 ### 三、变量 ###
 
-3.1 变量名的命名要求
+#### 3.1 变量名的命名要求 ####
 
 - 只能包含字母，数字和下划线
 - 只能以字母或者下划线开头
@@ -271,22 +271,142 @@ windows：
 
 ![](https://github.com/stuian/C/blob/master/pictures/c3.jpg?raw=true)
 
-3.2 数据类型
+#### 3.2 数据类型 ####
 
 - char
 - int
 - float
 - double
 
-> /.9d：小数点后九位
+> 决定了存放数据的大小。
 
-3.3 常量和宏定义
+> %.9d：小数点后九位
+
+#### 3.3 测试题： ####
+
+- 0 程序处理的两种基本数据对象是常量和变量。
+- 1 变量由变量名和存储单元组成。变量名用于确定目标，存储单元用于存放变量的值。
+- 3 C语言经历了ANSI C，C99,C11三大标准的变革，这三大标准定义的是c语言的标准和准则，即定义了c语言的语法。
+- 4 c语言内部使用的名字，这些名字具有特殊的含义。
+
+#### 3.4 动手： ####
+
+1、赋值
+
+    # include <stdio.h>
+    int main()
+    {
+    	int a;int b;
+    	b = 3;
+    	a = b;
+    	b = b * 2;
+    	printf("%d,%d",a,b);
+    }
+
+2、求圆的周长和面积
+
+	# include <stdio.h>
+	int main()
+	{
+		int r;
+		int c;
+		int s;
+		r = 5;
+		c = 2 * 3.14 * r;
+		s = 3.4 * r * r;
+		printf("半径为%d的圆，周长是%.2f,面积是%.2f",r,c,s); 
+	}
+
+3、练习一些打印
+
+
+#include <stdio.h>
+
+int main()
+{
+        printf("打印五个字符：%c %c %c %c %c\n", 70, 105, 115, 104, 67);
+        printf("前边用 填充：%10d\n", 2015);
+        printf("前边用0填充：%010d\n", 2015);
+        printf("右对齐，保留2位：%10.2f\n", 3.1416);
+        printf("左对齐，保留3位：%-10.3f\n", 3.1416);
+        printf("右对齐，指数形式：%10e\n", 520000.0);
+        printf("左对齐，指数形式：%-10E\n", 520000.0);
+
+        return 0;
+}
+
+> 为什么打印五个字符是用70，105，115，104，67，输出的确实英文字母呢
+
+### 四、常量和宏定义 ###
+
+#### 4.1 知识点 ####
 
 ![](https://github.com/stuian/C/blob/master/pictures/c4.jpg?raw=true)
 
 符号常量的定义
 
-#define MAX 256;
+    #define MAX 256
 
 > 标识符:包括常量，变量，函数等的名称
 > \0：识别字符串的结束
+
+#### 4.2 测试题 ####
+
+- 0 我们把为程序中的变量、类型、函数和标签起的名字叫做标识符。
+- 1 main是一个合法的标识符。
+- 2 字符串是常量。
+- 3 在c语言中，转义字符'\n'占一个字节的空间。
+- 4 字符串“FishC”由'F'，'i','s','h','C'这些英文字符以及结束标志'\0'构成。
+- 5 常量也有数据类型吧，字符常量，整型常量，符号常量等等。
+
+#### 4.3 动动手-define ####
+
+1、 换行替代
+	
+	# include <stdio.h>
+	# define NL '\n'
+	
+	int main()
+	{
+		
+		printf("Line1%c",NL);
+		printf("Line2%c",NL);
+	}
+
+2、
+
+	# include <stdio.h>
+	# define PI 3.14159
+	# define S(r) PI*r*r
+	# define C(r) 2*PI*r
+	
+	int main()
+	{
+		int r = 5;
+		printf("半径为%d的圆，面积是：%.2f,周长是：%.2f\n",r,S(r),C(r));
+		return 0;
+	}
+
+3、
+
+	# include <stdio.h>
+	# define fanqie 3.7/2
+	# define qilan 7/2
+	# define xiqin 1.3/2
+	# define kongxincai 8/2
+	# define yangcong 2.4/2
+	# define youcai 9/2
+	# define huanggua 6.3/2
+	# define bailuobo 0.5/2
+	
+	int main() 
+	{
+		printf("小明需要支付%.2f元\n",2*fanqie + 1*kongxincai + 1*youcai);
+		printf("小红需要支付%.2f元\n",3*xiqin + 0.5*yangcong + 5*huanggua);
+		printf("小甲鱼需要支付%.2f元\n",10*huanggua + 20*bailuobo);
+	}
+
+
+
+
+

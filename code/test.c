@@ -2,9 +2,9 @@
 
 int main()
 {
-	float b;
-	b = 0.32;
-	printf("%.1d",b);	
+	printf("\n\
+		a\n\
+a")	;
 	
 	return 0;
 }
