@@ -17,6 +17,8 @@
 
 #### 1.1 笔记 ####
 
+![](https://github.com/stuian/C/blob/master/pictures/S1E6-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B.png?raw=true)
+
 #### 1.2 测试题 ####
 
 - 0 根据定义，最长的是long long int 
