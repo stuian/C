@@ -2,7 +2,7 @@
 	
 	int main()
 	{
-	        printf("\n\
+		printf("\n\
 	         @\n\
 	        / \\\n\
 	        * *\n\
