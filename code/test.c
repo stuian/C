@@ -2,13 +2,24 @@
 
 int main()
 {
-        printf("打印五个字符：%c %c %c %c %c\n", 70, 105, 115, 104, 67);
-        printf("前边用 填充：%10d\n", 2015);
-        printf("前边用0填充：%010d\n", 2015);
-        printf("右对齐，保留2位：%10.2f\n", 3.1416);
-        printf("左对齐，保留3位：%-10.3f\n", 3.1416);
-        printf("右对齐，指数形式：%10e\n", 520000.0);
-        printf("左对齐，指数形式：%-10E\n", 520000.0);
+        char name[256];
+        float height, weight;
+
+        printf("请输入您的姓名：");
+        scanf("%s", name);
+
+        printf("请输入您的身高(cm)：");
+        scanf("%f", &height);
+
+        printf("请输入您的体重(kg)：");
+        scanf("%f", &weight);
+
+        printf("========== 正在为您转换 ==========\n");
+
+        height = height / 2.54; // 厘米转换为英寸
+        weight = weight / 0.453; // 公斤转换为磅
+
+        printf("%s的身高是%.2f(in)，体重是%.2f(lb)。\n", name, height, weight);
 
         return 0;
 }
