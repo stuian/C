@@ -11,7 +11,7 @@ int main()
 	
 	printf("请输入单价（元/平方）：") ;
 	scanf("%f",&price) ;
-	prinf("请输入面积：");
+	printf("请输入面积：");
 	scanf("%f",&area);
 	printf("请输入按揭成数：");
 	scanf("%d",&ratio);
