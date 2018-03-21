@@ -2,8 +2,11 @@
 
 int main()
 {
-        while (1)
-                ;
+        int ch,status;
+
+		status = scanf("%d",&ch);
+		
+		printf("%d",status);
 
         return 0;
 }

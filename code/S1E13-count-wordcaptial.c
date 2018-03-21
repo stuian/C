@@ -4,14 +4,13 @@ int main()
 {
     
     int count;
+    char ch;
     
     printf("ÇëÊäÈë£º");
     
-    while (getchar() == '\n')
-    	if (((int)getchar())>=65 && ((int)getchar())<=90) 
+    while ((ch = getchar()) != '\n')
+    	if ((int)ch >=65 && (int)ch <=90)
 			count = count + 1;
-		else
-			;
     
     printf("%d",count);
 	return 0;
