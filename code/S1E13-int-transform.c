@@ -21,6 +21,7 @@ int main()
 		{
 			if(num)
 			{
+				printf("%d\n",num);
 				break; //已有数字，则退出循环。 
 			}
 		}
