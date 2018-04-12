@@ -2,41 +2,19 @@
 
 int main()
 {
-        char ch;
-        int a, e, i, o, u;
+        int i = 0;
 
-        a = 0;
-        e = 0;
-        i = 0;
-        o = 0;
-        u = 0;
-
-        printf("请输入一个英文句子：");
-
-        while ((ch = getchar()) != '\n')
+        while (i++)
         {
-                switch (ch)
+                if (i > 10)
                 {
-                        case 'a':
-                        case 'A': a++;
-                                  break;
-                        case 'e':
-                        case 'E': e++;
-                                  break;
-                        case 'i':
-                        case 'I': i++;
-                                  break;
-                        case 'o':
-                        case 'O': o++;
-                                  break;
-                        case 'u':
-                        case 'U': u++;
-                                  break;
+                        goto Label;
                 }
+                putchar('B');
         }
 
-        printf("您输入的句子中，包含元音字母%d个！\n", a + e + i + o + u);
-        printf("其中:a(%d),e(%d),i(%d),o(%d),u(%d)\n", a, e, i, o, u);
+Label:  putchar('\n');
+Labe2:  printf("Ending!");
 
         return 0;
 }
