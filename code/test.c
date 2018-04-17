@@ -2,19 +2,8 @@
 
 int main()
 {
-        int i = 0;
+    int i = 1;
+	printf("%d",i/2); 
 
-        while (i++)
-        {
-                if (i > 10)
-                {
-                        goto Label;
-                }
-                putchar('B');
-        }
-
-Label:  putchar('\n');
-Labe2:  printf("Ending!");
-
-        return 0;
+    return 0;
 }
