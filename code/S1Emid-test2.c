@@ -5,51 +5,33 @@ int main()
 {
 	// 600851475143
 	
-	int num	= 600851475143;
-	int i = 2;
-	int max = 1;
+	long long i,j,k,l,num	= 600851475143;
+	
 	_Bool flag = 1; 
 	
-	half = (int)sqrt(num);
-	for (i;i<=half;i++)
+	for (i = 2,j = num /i;flag != 0;i++,j = num/i , flag = 1)
 	{
-		if (num % i == 0)
+		if (i * j == num)
 		{
-			if (i>max)
+			k = sqrt((double)j);
+			for (l = 2;l <= k;l++)
 			{
-				half-2 = (int)sqrt(i);
-				for (i;i<=half;i++)
+				if(j % l == 0)
 				{
-					if (num % i == 0)
-					{
-						;
-					}
-					else
-					{
-						;
-					}
-				}	
-				max = i;	
+					flag = 0;
+					break;
+				}
+			}
+			if (flag)
+			{
+				break;
 			}
 		}
 	}
 	
-	while (flag)
-	{
-		factor = num / max; 
-	}	
+	printf("%lld\n",j); // 6857
 	
-	//判断是否是质数 
-	half = (int)sqrt(num);
-	for (i;i<=half;i++)
-	{
-		if (num % i == 0)
-		{
-			;
-		}
-		else
-		{
-			;
-		}
-	}
+	return 0;
+	
+	
 }

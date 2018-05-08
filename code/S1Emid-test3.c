@@ -2,16 +2,34 @@
 
 int main()
 {
-	//两个三位数相乘得出的最大的回文数 
+	int i,j,target,invert = 0,num = 998001; // 999*999 100*100
 	
-	//求倒置数 
-	num = 123;
-	while(i>0)
+	for (;num>10000;num--)
 	{
-		i = num % 10;
-		inversion = 
-		i = (num - i) % 
+		//求先倒置数
+		target = num; 
+		invert = 0;
+		while(target)
+		{
+			invert = invert * 10 + target % 10;
+			target = target / 10;
+		}
 		
+		//如果跟倒置数一致，说明该数是回文数
+		if (invert == num) 
+		{
+			for (i = 100;i<1000;i++)
+			{
+				if (!(num % i) && (num / i >= 100) && (num / i < 1000))
+				{
+					goto FINDIT;
+				}
+			}
+		}
+		
+	
 	}
 	
+FINDIT:	printf("结果是%d==%d * %d\n",num,i,num / i);
+
 }

@@ -2,8 +2,9 @@
 
 int main()
 {
-    int i = 1;
-	printf("%d",i/2); 
+    int i ;
+    i = None;
+	printf("%d",i); 
 
     return 0;
 }
