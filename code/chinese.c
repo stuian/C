@@ -13,6 +13,10 @@ int main()
 		printf("a[%d] = %d\n",i,a[i]);
 	}
 
+//	a[0] = -42
+//	a[1] = -48
+//	a[2] = 0
+//	size of a Chinese word is 3
 	
 //	scanf("%s",a);
 //	printf("%s",a);
